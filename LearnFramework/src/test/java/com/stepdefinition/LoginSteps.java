@@ -16,12 +16,8 @@ import resuseable.BrowerInvoke;
 import java.io.IOException;
 
 public class LoginSteps extends BrowerInvoke {
-
     private WebDriver driver;
-    private String actualText;
-
     private LoginPage login;
-
     private DashboardPage dashboardPage;
 
     @Given("User Navigates to Required Url")
@@ -45,8 +41,4 @@ public class LoginSteps extends BrowerInvoke {
         dashboardPage = new DashboardPage(driver);
         dashboardPage.verifyPageTitle();
     }
-
-
-
-
 }
