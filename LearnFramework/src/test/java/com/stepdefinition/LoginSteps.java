@@ -41,4 +41,14 @@ public class LoginSteps extends BrowerInvoke {
         dashboardPage = new DashboardPage(driver);
         dashboardPage.verifyPageTitle();
     }
+
+    @When("User Enters Invalid Username and Password")
+    public void userEntersInvalidUsernameAndPassword() {
+        login = new LoginPage(driver);
+        login.enterInValidCredentials();
+    }
+
+    @Then("Validate the Error Message")
+    public void validateTheErrorMessage() {
+    }
 }
